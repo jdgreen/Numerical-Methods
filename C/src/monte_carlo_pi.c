@@ -8,11 +8,11 @@
 #define SIDE 10000
 #define M_PI 3.14159265358979323846
 
+//consider a square with quarter circle
+
 int main(int argc, char const *argv[])
 {
-	//consider a unit square with a quarter circle
-
-	//declare variables
+		//declare variables
 	int x, y, r=SIDE;
 	double ratio=0, pi, error;
 
