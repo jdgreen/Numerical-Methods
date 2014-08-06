@@ -6,7 +6,7 @@
 
 #define SIZE 4
 
-//function to compute the base number of a given value
+//function to compute the base number of a given integer value
 int base_num( int num){
 	int diff=0, buf=num;
 	while( buf >= 0){
@@ -43,14 +43,14 @@ int main(int argc, char const *argv[])
 		for( int count=0; count < SIZE; count++){
 		}		
 		//for each value, consider the whole of the results array
-		for( int a=SIZE; a>=0; a--){
+		for( int a=SIZE-1; a>=0; a--){
 			buf = result[a]*values[i];
 
 			//update current result value
-			result[a] = carry + base_num(buf);
-			
+			result[a] = base_num(carry + buf);
+
 			//update carry through
-			carry = (int) buf/10;
+			carry = (int) (buf+carry)/10;
 		}
 	}
 
